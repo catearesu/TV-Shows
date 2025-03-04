@@ -53,7 +53,7 @@ def show_overview():
     st.subheader("4. Sentiment Analysis")
     st.image ("https://getthematic.com/insights/content/images/size/w1384/2024/12/20241012-How-to---Sentiment-analysis-of-reviews.png", width=400)
     st.write("""
-    Another part of this analysis involved diving into **public opinion** through **sentiment analysis**. I conducted sentiment analysis on reviews to gauge how each TV show was perceived by its audience. The goal was to assess the overall sentiment—whether it was **positive**, **negative**, or **neutral**—and understand how viewers rated each show.
+    Another part of this analysis involved diving into **public opinion** through **sentiment analysis**. I conducted sentiment analysis on reviews to evaluate how each TV show was perceived by its audience. The goal was to assess the overall sentiment—whether it was **positive**, **negative**, or **neutral**—and understand how viewers rated each show.
     To achieve this, I used **tokenization** and **lemmatization** techniques to process the reviews and extract meaningful insights from the text. Additionally, I employed the **compound score** from the VADER sentiment analysis tool, which helped quantify the overall sentiment in a more comprehensive way.
     To further enhance the analysis, I generated a **WordCloud** that visually represents the most frequently occurring words in the reviews.
              """)

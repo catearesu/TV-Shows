@@ -22,10 +22,10 @@ def predict_emmy():
     """) 
     col1, col2 = st.columns(2)
     with col1:
-        st.markdown("ANOVA")
+        st.markdown("*Anova*")
         st.image("/Users/caterina/IronHack/Project IV Tv Series/images/Captura de pantalla 2025-03-03 a las 21.48.54.png", width=300)
     with col2:
-        st.markdown("CHI CUADRADO")
+        st.markdown("*Chi Cuadrado*")
         st.image("/Users/caterina/IronHack/Project IV Tv Series/images/Captura de pantalla 2025-03-03 a las 21.48.06.png", width=300)
 
     # SMOTE
@@ -37,10 +37,10 @@ def predict_emmy():
     """)
     col1, col2 = st.columns(2)
     with col1:
-        st.markdown("Before Smote")
+        st.markdown("*Before Smote*")
         st.image("/Users/caterina/IronHack/Project IV Tv Series/images/Captura de pantalla 2025-03-03 a las 21.43.34.png", width=300)
     with col2:
-        st.markdown("After applying Smote")
+        st.markdown("*After applying Smote*")
         st.image("/Users/caterina/IronHack/Project IV Tv Series/images/Captura de pantalla 2025-03-03 a las 21.40.03.png", width=300)
     
     # MACHINE LEARNING MODELS
@@ -49,49 +49,52 @@ def predict_emmy():
     st.write("**Recall** (Sensitivity): Recall measures the ratio of true positive predictions to the total actual positives. It calculates the ability of the classifier to find all positive instances.")
     st.write("**F1-Score**: The F1-score is the harmonic mean of precision and recall. It gives a balance between precision and recall.")
     st.write("**Accuracy**: Accuracy is the ratio of correctly predicted observations to the total observations. It gives an overall performance of the model.")
-    st.write("Among all these scores I consider more appropriate to use ACCURACY")
+    st.write("Among all these scores, I considered more appropriate to use the *ACCURACY*.")
     st.write("To predict the Emmy winners, I used different **Machine Learning** models:")
 
     # LOGISTIC REGRESSION
-    st.write("- **Logistic Regression**: Ideal for binary classification, such as predicting whether a series will win or not.")
+    st.markdown("- **<span style='font-size: 20px;'><b>Logistic Regression</b></span>**: Ideal for binary classification, such as predicting whether a series will win or not.", unsafe_allow_html=True)
     st.image("/Users/caterina/IronHack/Project IV Tv Series/images/Captura de pantalla 2025-03-03 a las 20.26.42.png")
     col1, col2 = st.columns(2)
     with col1:
         st.image("/Users/caterina/IronHack/Project IV Tv Series/images/confmatrixlogregress.png", caption="Confusion Matrix", width=300)
     with col2:
         st.image("/Users/caterina/IronHack/Project IV Tv Series/images/roccurvelogregress.png", caption="Roc Curve", width=300)
-    
+    st.markdown("---") # para que slga una linea que separe
+
     # KNN 
-    st.write("- **K-Nearest Neighbors (KNN)**: A non-parametric algorithm that classifies based on the nearest neighbors in the feature space.")
+    st.markdown("- **<span style='font-size: 20px;'><b>K-Nearest Neighbors (KNN)</b></span>**: A non-parametric algorithm that classifies based on the nearest neighbors in the feature space.", unsafe_allow_html=True)
     st.write('''*Problems*
-- *`Noisy Data`* KNN Performs poorly with a lot of irrelevant features or outliers
-- *`Curse of Dimensionality`*: Degrade significantly as the number of dimensions increases''')
-    st.write("Hyperparameter Tuning")
+- *Noisy Data*: KNN Performs poorly with a lot of irrelevant features or outliers
+- *Curse of Dimensionality*: Degrade significantly as the number of dimensions increases''')
+    st.markdown("*Hyperparameter Tuning*")
     # accuracy score y best parameters
-    st.image("/Users/caterina/IronHack/Project IV Tv Series/images/Captura de pantalla 2025-03-03 a las 20.46.26.png")
+    st.image("/Users/caterina/IronHack/Projects/TV-Shows/images/Captura de pantalla 2025-03-04 a las 19.34.43.png")
     col1, col2 = st.columns(2)
     with col1:
         st.image("/Users/caterina/IronHack/Project IV Tv Series/images/knnconfmatrix.png", caption="Confusion Matrix", width=300)
     with col2:
         st.image("/Users/caterina/IronHack/Project IV Tv Series/images/knnroccurve.png", caption="Roc Curve", width=300)
-    
+    st.markdown("---") # para que slga una linea que separe
+
     # DECISION TREE
-    st.write("- **Decision Tree**: A model that splits the data into branches based on feature values, providing an intuitive model that captures non-linear relationships.")
-    st.write("Hyperparameter Tuning")
+    st.markdown("- **<span style='font-size: 20px;'><b>Decision Tree</b></span>**: A model that splits the data into branches based on feature values, providing an intuitive model that captures non-linear relationships.", unsafe_allow_html=True)
+    st.markdown("*Hyperparameter Tuning*")
     # best parameters
-    st.image("/Users/caterina/IronHack/Project IV Tv Series/images/Captura de pantalla 2025-03-03 a las 20.24.25.png")
+    st.image("/Users/caterina/IronHack/Projects/TV-Shows/images/Captura de pantalla 2025-03-04 a las 19.51.21.png")
     # accuracy score
     st.image("/Users/caterina/IronHack/Project IV Tv Series/images/Captura de pantalla 2025-03-03 a las 20.23.55.png")
     col1, col2 = st.columns(2)
     with col1:
-        st.image("/Users/caterina/IronHack/Project IV Tv Series/images/dtconfmatr.png", caption="Confusion Matrix", width=300)
+        st.image("/Users/caterina/IronHack/Projects/TV-Shows/images/dtconfmatr.png", caption="Confusion Matrix", width=300)
     with col2:
-        st.image("/Users/caterina/IronHack/Project IV Tv Series/images/dtroccurve.png", caption="Roc Curve", width=300)
-    st.image ("/Users/caterina/IronHack/Project IV Tv Series/images/dt.png") # decision tree
-    
+        st.image("/Users/caterina/IronHack/Projects/TV-Shows/images/dtroccurve.png", caption="Roc Curve", width=300)
+    st.image ("//Users/caterina/IronHack/Projects/TV-Shows/images/dt.png") # decision tree
+    st.markdown("---") # para que slga una linea que separe
+
     # RANDOM FOREST
-    st.write("- **Random Forest**: An ensemble of decision trees, which improves the performance by averaging the predictions of multiple trees to reduce overfitting and increase robustness.")
-    st.write("Hyperparameter Tuning")
+    st.markdown("- **<span style='font-size: 20px;'><b>Random Forest</b></span>**: An ensemble of decision trees, which improves the performance by averaging the predictions of multiple trees to reduce overfitting and increase robustness.", unsafe_allow_html=True)
+    st.markdown("*Hyperparameter Tuning*")
        #Best parameters: {'max_depth': 20, 'min_samples_split': 2, 'n_estimators': 50}
     # Best parameters
     st.image("/Users/caterina/IronHack/Project IV Tv Series/images/Captura de pantalla 2025-03-03 a las 20.22.05.png")
@@ -99,15 +102,14 @@ def predict_emmy():
     st.image("/Users/caterina/IronHack/Project IV Tv Series/images/Captura de pantalla 2025-03-03 a las 20.21.35.png")
     col1, col2 = st.columns(2)
     with col1:
-        st.image("/Users/caterina/IronHack/Project IV Tv Series/images/rfconfmatr.png", caption="Confusion Matrix", width=300)
+        st.image("/Users/caterina/IronHack/Projects/TV-Shows/images/rfconfmatr.png", caption="Confusion Matrix", width=300)
     with col2:
-        st.image("/Users/caterina/IronHack/Project IV Tv Series/images/rfroccurve.png", caption="Roc Curve", width=300)
-
-
+        st.image("/Users/caterina/IronHack/Projects/TV-Shows/images/rfroccurve.png", caption="Roc Curve", width=300)
+    st.markdown("---") # para que slga una linea que separe
 
 
     st.write("""
-    Let's try to use **Random Forest** to predict wheather a TV-Show has any chance to win a Emmy
+    Let's try to use **Random Forest** to predict whether a TV-Show has a chance to win an Emmy
     """)
     # Pedimos los inputs al usuario
     rating = int(st.number_input("Select a rating (1 to 10): "))
