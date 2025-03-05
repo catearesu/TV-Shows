@@ -5,8 +5,9 @@ This project is an interactive application that allows users to explore a variet
 ![TV Show Image](https://m.media-amazon.com/images/I/91FReOrpBZL._AC_UF1000,1000_QL80_.jpg)
 
 ## 1. Data Collection via API
-
-<img src="images/tmdb.png" alt="alt text" width="200"/>
+<p >
+  <img src="images/tmdb.jpg" width="20%" style="display: inline-block; margin-right: 10px;"/>
+</p>
 
 The first step was **collecting data** using **APIs**. I gathered information about TV shows from all over the world, including:
 - **Title**
@@ -32,18 +33,21 @@ Once the data was collected, I performed **Exploratory Data Analysis (EDA)** to 
   - Most recurrent actors, etc.
 
 ## 3. Machine Learning Models
+<p >
+  <img src="images/Captura de pantalla 2025-03-03 a las 16.30.30.png" width="50%" style="display: inline-block; margin-right: 10px;"/>
+</p>
 
-After preparing the data, I applied several **Machine Learning models** to predict the winners of the **Emmy Awards**. The models used were:
+After preparing the data, I applied several **Machine Learning Models** to predict the winners of the **Emmy Awards**. 
+The models used were:
+
 - **Logistic Regression**
 - **K-Nearest Neighbors (KNN)**
 - **Decision Trees**
 - **Random Forest**
 
-![Machine Learning Models](path/to/machine_learning_image.png)
 
 ## 4. Sentiment Analysis
 
-![Sentiment Analysis](https://getthematic.com/insights/content/images/size/w1384/2024/12/20241012-How-to---Sentiment-analysis-of-reviews.png)
 
 Another part of this analysis involved diving into **public opinion** through **sentiment analysis**. I conducted sentiment analysis on reviews to evaluate how each TV show was perceived by its audience. The goal was to assess the overall sentiment—whether it was **positive**, **negative**, or **neutral**—and understand how viewers rated each show.
 
