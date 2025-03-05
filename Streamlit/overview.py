@@ -13,7 +13,7 @@ def show_overview():
 
     
     st.subheader("1. Data Collection via API")
-    st.image("/Users/caterina/IronHack/Projects/TV-Shows/images/tmdb.jpg", width=200)  
+    st.image("/Users/caterina/IronHack/Projects/TV-Shows/images/tmdb.jpg", width=100)  
 
     st.write("""
     The first step was **collecting data** using **APIs**. I gathered information about TV shows from all over the world, including:
