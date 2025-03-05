@@ -2,6 +2,8 @@
 
 This project is an interactive application that allows users to explore a variety of TV shows, make predictions about their chances of winning an Emmy, and much more...
 
+link to streamlit
+
 ![TV Show Image](https://m.media-amazon.com/images/I/91FReOrpBZL._AC_UF1000,1000_QL80_.jpg)
 
 ## 1. Data Collection via API
@@ -31,10 +33,12 @@ Once the data was collected, I performed **Exploratory Data Analysis (EDA)** to 
   - Relation between genre and country
   - Platforms with the most series
   - Most recurrent actors, etc.
+    
+ link to tableau
 
 ## 3. Machine Learning Models
 <p >
-  <img src="images/Captura de pantalla 2025-03-03 a las 16.30.30.png" width="50%" style="display: inline-block; margin-right: 10px;"/>
+  <img src="images/Captura de pantalla 2025-03-03 a las 16.30.30.png" width="70%" style="display: inline-block; margin-right: 10px;"/>
 </p>
 
 After preparing the data, I applied several **Machine Learning Models** to predict the winners of the **Emmy Awards**. 
@@ -48,7 +52,7 @@ The models used were:
 
 ## 4. Sentiment Analysis
 <p >
-  <img src="images/sentiment_analysis.png" width="50%" style="display: inline-block; margin-right: 10px;"/>
+  <img src="images/sentiment_analysis.png" width="70%" style="display: inline-block; margin-right: 10px;"/>
 </p>
 
 Another part of this analysis involved diving into **public opinion** through **sentiment analysis**. I conducted sentiment analysis on reviews to evaluate how each TV show was perceived by its audience. The goal was to assess the overall sentiment—whether it was **positive**, **negative**, or **neutral**—and understand how viewers rated each show.
