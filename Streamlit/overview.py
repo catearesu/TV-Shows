@@ -6,14 +6,14 @@ def show_overview():
 
     st.markdown("""
     This project is an interactive application that allows users to explore a variety of TV shows,
-    make predictions about their chances of winning an Emmy, and much more..
+    make predictions about their chances of winning an Emmy, and much more...
     """)
 
     st.image("https://m.media-amazon.com/images/I/91FReOrpBZL._AC_UF1000,1000_QL80_.jpg", width=800)
 
     
     st.subheader("1. Data Collection via API")
-    st.image("https://play-lh.googleusercontent.com/ZVuzhksT-SVMPRRG_QiAurxc0Ex800HkKPRH6uFMW-akgB1Rmp11v3SuR67LklNlCA=w600-h300-pc0xffffff-pd", width=200)  
+    st.image("/Users/caterina/IronHack/Projects/TV-Shows/images/tmdb.jpg", width=200)  
 
     st.write("""
     The first step was **collecting data** using **APIs**. I gathered information about TV shows from all over the world, including:
@@ -31,12 +31,14 @@ def show_overview():
     
     st.subheader("2. Exploratory Data Analysis (EDA)")
     st.write("""
-    Once the data was collected, I performed **Exploratory Data Analysis (EDA)** to better understand the relationships between different features in the dataset. This stage involved:
-    - **Data Cleaning**: Dealing with missing or inconsistent values, outliers, drop columns, replacing values, grouping features.
-    - **Feature Engineering**: Extracting useful features such as the genre distribution, platform popularity, and ratings.
-    - **Visualizations**: Using **matplotlib** and **seaborn** to generate insightful visualizations. These included:
-      - **Bar charts** showing the distribution of genres and platforms.
-      - **Correlation heatmaps** to uncover relationships between numerical variables like ratings and number of episodes.
+    Once the data was collected, I performed **Exploratory Data Analysis (EDA)** to better understand the relationships between different features in the dataset. This process included:
+    - **Data Cleaning**: Dealing with missing or inconsistent values, outliers, drop columns, replacing values.
+    - **Feature Engineering**: Grouping variables, such as genre and platforms.
+    - **Visualizations**: Using **Tableau** to generate insightful and interactive graphs. These included:
+             Distribution of series through the years
+             - Relation between genre and country
+             - Platforms with most series
+             - Most recurrent actors etc.
     """)
     
     st.subheader("3. Machine Learning Models")

@@ -7,8 +7,7 @@ import streamlit.components.v1 as components
 
 
 def tv_shows_finder():
-    st.header("TV-Shows Finder")
-    st.write("Welcome to the TV-Shows Finder.")
+    st.header("TV-Shows Searcher")
     st.write("Here you can explore content of more than 9000 TV-Shows from all over the world!!!")
     st.image("https://acf.geeknetic.es/imagenes/auto/2023/5/2/h3o-ahorra-dinero-planificando-ver-tus-series-favoritas.jpg", width=550)
     df_finder= pd.read_csv("/Users/caterina/IronHack/Project IV Tv Series/Dataset/df_buscador_streamlit2.csv")

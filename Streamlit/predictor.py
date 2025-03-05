@@ -31,7 +31,7 @@ def predict_emmy():
     # SMOTE
     st.subheader("Handling Imbalanced Data with SMOTE")
     st.write("""
-    One of the key challenges in predicting Emmy Award winners is the **data imbalance** in the dataset. For instance, we have far more losing nominations than winning ones. To address this, we use **SMOTE (Synthetic Minority Over-sampling Technique)**.
+    One of the key challenges in predicting Emmy Award winners is the **data imbalance** in the dataset. For instance, we have far more losing nominations than winning ones. To address this, I used **SMOTE (Synthetic Minority Over-sampling Technique)**.
     
     SMOTE works by generating synthetic samples for the minority class, thereby balancing the dataset and helping the models generalize better. This is especially helpful for improving the accuracy of classifiers when faced with highly imbalanced data.
     """)
@@ -54,6 +54,7 @@ def predict_emmy():
 
     # LOGISTIC REGRESSION
     st.markdown("- **<span style='font-size: 20px;'><b>Logistic Regression</b></span>**: Ideal for binary classification, such as predicting whether a series will win or not.", unsafe_allow_html=True)
+    st.write ("The model assumes that the relationship between the features and the log-odds of the response variable is linear. It also assumes independence of observations and absence of multicollinearity")
     st.image("/Users/caterina/IronHack/Project IV Tv Series/images/Captura de pantalla 2025-03-03 a las 20.26.42.png")
     col1, col2 = st.columns(2)
     with col1:
@@ -78,7 +79,7 @@ def predict_emmy():
     st.markdown("---") # para que slga una linea que separe
 
     # DECISION TREE
-    st.markdown("- **<span style='font-size: 20px;'><b>Decision Tree</b></span>**: A model that splits the data into branches based on feature values, providing an intuitive model that captures non-linear relationships.", unsafe_allow_html=True)
+    st.markdown("- **<span style='font-size: 20px;'><b>Decision Tree</b></span>**: A model that works with stratifying or segmenting the predictor space into a number of binary decisions to make the prediction. Each binary split consists of a decision rule which either sends us left or sends us right.", unsafe_allow_html=True)
     st.markdown("*Hyperparameter Tuning*")
     # best parameters
     st.image("/Users/caterina/IronHack/Projects/TV-Shows/images/Captura de pantalla 2025-03-04 a las 19.51.21.png")
@@ -112,13 +113,16 @@ def predict_emmy():
     Let's try to use **Random Forest** to predict whether a TV-Show has a chance to win an Emmy
     """)
     # Pedimos los inputs al usuario
-    rating = int(st.number_input("Select a rating (1 to 10): "))
-    popularity = int(st.number_input("Select a popularity: "))
-    vote_count = int(st.number_input("Select a vote count: "))
-    seasons = int(st.number_input("Select the number of seasons: "))
-    episodes = int(st.number_input("Select the number of episodes: "))
-    duration = int(st.number_input("Select the episode duration in minutes: "))
-    positioncat = st.selectbox("Select a genre", ["Comedy", "Drama", "Family", "Animation", "Entertainment", "Action & Adventure", "Documentary"])
+    rating = int(st.number_input("What rating does the show have? (1 to 10): ", min_value=1.00))
+    if rating < 1 or rating > 10:
+        st.error("Please insert a rating between 1 and 10.")
+        st.stop()  # deja de ejectuar el codigo si el rating es menor que 1 o mayor que 10
+    popularity = int(st.number_input("How popular is it?: "))
+    vote_count = int(st.number_input("How many votes does it have?: "))
+    seasons = int(st.number_input("How many seasons?: "))
+    episodes = int(st.number_input("How many episodes: "))
+    duration = int(st.number_input("What's the average duration? (in minutes): "))
+    positioncat = st.selectbox("Which genre is it?", ["Comedy", "Drama", "Family", "Animation", "Entertainment", "Action & Adventure", "Documentary"])
     # transformo los datos
     popularity_log = math.log(popularity) if popularity > 0 else float("nan")
     vote_count_log = math.log(vote_count) if vote_count > 0 else float("nan")
