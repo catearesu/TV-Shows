@@ -176,7 +176,8 @@ def search_by_name(df_finder):
                     st.image(poster_url, width=200) 
                 if pd.notna(df_finder["Synopsis"].iloc[0]):
                     st.write(f"📜 **Synopsis:** {df_finder['Synopsis'].iloc[0]}")
-                st.write(f"🎬 **Genre:** {df_finder['Genero'].iloc[0]}")
+                if pd.notna(df_finder["Genero"].iloc[0]):
+                    st.write(f"🎬 **Genre:** {df_finder['Genero'].iloc[0]}")
                 st.write(f"📅 **Release date:** {df_finder['First Air Date'].iloc[0]}")
                 if pd.notna(df_finder["Rating"].iloc[0]):
                     st.write(f"⭐ **Rating:** {round(df_finder['Rating'].iloc[0], 1)}")

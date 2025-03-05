@@ -28,7 +28,8 @@ def show_overview():
 
     The data was collected from multiple sources (TMDB API and some datasets from kaggle) to ensure a rich dataset that covers a broad range of shows, including historical data and information on the most recent nominees.
     """)
-    
+    st.markdown("---") # para que slga una linea que separe
+
     st.subheader("2. Exploratory Data Analysis (EDA)")
     st.write("""
     Once the data was collected, I performed **Exploratory Data Analysis (EDA)** to better understand the relationships between different features in the dataset. This process included:
@@ -40,9 +41,9 @@ def show_overview():
              - Platforms with most series
              - Most recurrent actors etc.
     """)
-    
+    st.markdown("---") # para que slga una linea que separe
+
     st.subheader("3. Machine Learning Models")
-    # st.image("https://www.repsol.com/content/dam/repsol-corporate/es/energia-e-innovacion/machine-learning-cabecera.jpg.transform/rp-rendition-md/image.jpg", width=400)
     st.image("/Users/caterina/IronHack/Project IV Tv Series/images/Captura de pantalla 2025-03-03 a las 16.30.30.png", width=800)
     st.write("""
     After preparing the data, I applied several **Machine Learning models** to predict the winners of the **Emmy Awards**. The models used were:
@@ -51,7 +52,8 @@ def show_overview():
     - **Decision Trees**
     - **Random Forest**
     """)
-    
+    st.markdown("---") # para que slga una linea que separe
+
     st.subheader("4. Sentiment Analysis")
     st.image ("https://getthematic.com/insights/content/images/size/w1384/2024/12/20241012-How-to---Sentiment-analysis-of-reviews.png", width=400)
     st.write("""
