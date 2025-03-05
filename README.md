@@ -47,7 +47,9 @@ The models used were:
 
 
 ## 4. Sentiment Analysis
-
+<p >
+  <img src="images/sentiment_analysis.png" width="50%" style="display: inline-block; margin-right: 10px;"/>
+</p>
 
 Another part of this analysis involved diving into **public opinion** through **sentiment analysis**. I conducted sentiment analysis on reviews to evaluate how each TV show was perceived by its audience. The goal was to assess the overall sentiment—whether it was **positive**, **negative**, or **neutral**—and understand how viewers rated each show.
 
