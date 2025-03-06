@@ -34,7 +34,7 @@ Once the data was collected, I performed **Exploratory Data Analysis (EDA)** to 
   - Platforms with the most series
   - Most recurrent actors, etc.
     
- link to tableau
+[Tableau](https://public.tableau.com/views/TV-ShowAnalysis/TV-SHOWSOVERVIEW?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ## 3. Machine Learning Models
 <p >
