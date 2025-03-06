@@ -4,7 +4,7 @@ import joblib
 
 def predict_emmy():
     # Cargamos el modelo
-    rf_best_model = joblib.load("/Users/caterina/IronHack/Project IV Tv Series/Dataset/rf_best_model.pkl")
+    rf_best_model = joblib.load("Dataset/rf_best_model.pkl")
     st.header("Emmy Prediction for TV Shows")
     st.image("https://gifdb.com/images/high/winner-benedict-townsend-ciee9zgfd6zuq8w8.gif", width=600)
 
@@ -23,10 +23,10 @@ def predict_emmy():
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("*Anova*")
-        st.image("/Users/caterina/IronHack/Project IV Tv Series/images/Captura de pantalla 2025-03-03 a las 21.48.54.png", width=300)
+        st.image("images/Captura de pantalla 2025-03-03 a las 21.48.54.png", width=300)
     with col2:
         st.markdown("*Chi Cuadrado*")
-        st.image("/Users/caterina/IronHack/Project IV Tv Series/images/Captura de pantalla 2025-03-03 a las 21.48.06.png", width=300)
+        st.image("images/Captura de pantalla 2025-03-03 a las 21.48.06.png", width=300)
 
     # SMOTE
     st.subheader("Handling Imbalanced Data with SMOTE")
@@ -38,10 +38,10 @@ def predict_emmy():
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("*Before Smote*")
-        st.image("/Users/caterina/IronHack/Project IV Tv Series/images/Captura de pantalla 2025-03-03 a las 21.43.34.png", width=300)
+        st.image("images/Captura de pantalla 2025-03-03 a las 21.43.34.png", width=300)
     with col2:
         st.markdown("*After applying Smote*")
-        st.image("/Users/caterina/IronHack/Project IV Tv Series/images/Captura de pantalla 2025-03-03 a las 21.40.03.png", width=300)
+        st.image("images/Captura de pantalla 2025-03-03 a las 21.40.03.png", width=300)
     
     # MACHINE LEARNING MODELS
     st.subheader("Machine Learning Models Used")
@@ -55,12 +55,12 @@ def predict_emmy():
     # LOGISTIC REGRESSION
     st.markdown("- **<span style='font-size: 20px;'><b>Logistic Regression</b></span>**: Ideal for binary classification, such as predicting whether a series will win or not.", unsafe_allow_html=True)
     st.write ("The model assumes that the relationship between the features and the log-odds of the response variable is linear. It also assumes independence of observations and absence of multicollinearity")
-    st.image("/Users/caterina/IronHack/Project IV Tv Series/images/Captura de pantalla 2025-03-03 a las 20.26.42.png")
+    st.image("images/Captura de pantalla 2025-03-03 a las 20.26.42.png")
     col1, col2 = st.columns(2)
     with col1:
-        st.image("/Users/caterina/IronHack/Project IV Tv Series/images/confmatrixlogregress.png", caption="Confusion Matrix", width=300)
+        st.image("images/confmatrixlogregress.png", caption="Confusion Matrix", width=300)
     with col2:
-        st.image("/Users/caterina/IronHack/Project IV Tv Series/images/roccurvelogregress.png", caption="Roc Curve", width=300)
+        st.image("images/roccurvelogregress.png", caption="Roc Curve", width=300)
     st.markdown("---") # para que slga una linea que separe
 
     # KNN 
@@ -73,9 +73,9 @@ def predict_emmy():
     st.image("/Users/caterina/IronHack/Projects/TV-Shows/images/Captura de pantalla 2025-03-04 a las 19.34.43.png")
     col1, col2 = st.columns(2)
     with col1:
-        st.image("/Users/caterina/IronHack/Project IV Tv Series/images/knnconfmatrix.png", caption="Confusion Matrix", width=300)
+        st.image("images/knnconfmatrix.png", caption="Confusion Matrix", width=300)
     with col2:
-        st.image("/Users/caterina/IronHack/Project IV Tv Series/images/knnroccurve.png", caption="Roc Curve", width=300)
+        st.image("images/knnroccurve.png", caption="Roc Curve", width=300)
     st.markdown("---") # para que slga una linea que separe
 
     # DECISION TREE
@@ -84,7 +84,7 @@ def predict_emmy():
     # best parameters
     st.image("/Users/caterina/IronHack/Projects/TV-Shows/images/Captura de pantalla 2025-03-04 a las 19.51.21.png")
     # accuracy score
-    st.image("/Users/caterina/IronHack/Project IV Tv Series/images/Captura de pantalla 2025-03-03 a las 20.23.55.png")
+    st.image("images/Captura de pantalla 2025-03-03 a las 20.23.55.png")
     col1, col2 = st.columns(2)
     with col1:
         st.image("/Users/caterina/IronHack/Projects/TV-Shows/images/dtconfmatr.png", caption="Confusion Matrix", width=300)
@@ -98,9 +98,9 @@ def predict_emmy():
     st.markdown("*Hyperparameter Tuning*")
        #Best parameters: {'max_depth': 20, 'min_samples_split': 2, 'n_estimators': 50}
     # Best parameters
-    st.image("/Users/caterina/IronHack/Project IV Tv Series/images/Captura de pantalla 2025-03-03 a las 20.22.05.png")
+    st.image("images/Captura de pantalla 2025-03-03 a las 20.22.05.png")
     # accuracy score
-    st.image("/Users/caterina/IronHack/Project IV Tv Series/images/Captura de pantalla 2025-03-03 a las 20.21.35.png")
+    st.image("images/Captura de pantalla 2025-03-03 a las 20.21.35.png")
     col1, col2 = st.columns(2)
     with col1:
         st.image("/Users/caterina/IronHack/Projects/TV-Shows/images/rfconfmatr.png", caption="Confusion Matrix", width=300)

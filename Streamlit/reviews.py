@@ -19,7 +19,7 @@ def generate_wordcloud(serie_reviews):
 def user_reviews():
     st.header("TV-Shows Reviews")
     st.write("Let's see what other people think about your favourite serie 🤔")
-    df_reviews = pd.read_csv("/Users/caterina/IronHack/Projects/TV-Shows/Dataset/df_reseñas_wordcloud.csv")  
+    df_reviews = pd.read_csv("Dataset/df_reseñas_wordcloud.csv")  
 
     # Seleccionamos la serie
     series_list = df_reviews["Title"].unique()
