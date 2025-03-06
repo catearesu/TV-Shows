@@ -28,13 +28,12 @@ The data was collected from multiple sources (TMDB API and some datasets from Ka
 Once the data was collected, I performed **Exploratory Data Analysis (EDA)** to better understand the relationships between different features in the dataset. This process included:
 - **Data Cleaning**: Handling missing or inconsistent values, outliers, dropping columns, and replacing values.
 - **Feature Engineering**: Grouping variables, such as genre and platforms.
-- **Visualizations**: Using **Tableau** to generate insightful and interactive graphs, including:
+- **Visualizations**: Using [Tableau](https://public.tableau.com/views/TV-ShowAnalysis/TV-SHOWSOVERVIEW?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link) to generate insightful and interactive graphs, including:
   - Distribution of series over the years
   - Relation between genre and country
   - Platforms with the most series
   - Most recurrent actors, etc.
     
- link to tableau
 
 ## 3. Machine Learning Models
 <p >
