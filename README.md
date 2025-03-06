@@ -2,7 +2,7 @@
 
 This project is an interactive application that allows users to explore a variety of TV shows, make predictions about their chances of winning an Emmy, and much more...
 
-link to streamlit
+APP TV-SHOWS [link to streamlit](https://tv-shows-searcher.streamlit.app/)
 
 ![TV Show Image](https://m.media-amazon.com/images/I/91FReOrpBZL._AC_UF1000,1000_QL80_.jpg)
 
