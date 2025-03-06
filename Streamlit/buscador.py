@@ -103,8 +103,9 @@ def search_by_filters(df_finder):
             df_finder_filtered["Rating"]= df_finder_filtered["Rating"].round(1)
             st.dataframe(df_finder_filtered[["Genero", "Rating", "Original Language"]])
             # mostrar los detalles de la serie al hacer click en la serie
-            df_finder_sorted = sorted(df_finder["Title"].unique())
-            selected_serie = st.selectbox("Select a TV-Show for more details: ", options= ["Select a TV-Show"]+ df_finder_sorted["Title"])
+            df_finder_title = df_finder["Title"].unique()
+            df_finder_sorted = sorted(df_finder_title)
+            selected_serie = st.selectbox("Select a TV-Show for more details: ", options= ["Select a TV-Show"]+ df_finder_sorted)
             if selected_serie != "Select a TV-Show":
                     serie_info = df_finder[df_finder["Title"] == selected_serie] 
                             
