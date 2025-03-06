@@ -120,7 +120,7 @@ def predict_emmy():
     popularity = int(st.number_input("How popular is it?: "))
     vote_count = int(st.number_input("How many votes does it have?: "))
     seasons = int(st.number_input("How many seasons?: "))
-    episodes = int(st.number_input("How many episodes: "))
+    episodes = int(st.number_input("How many episodes?: "))
     duration = int(st.number_input("What's the average duration? (in minutes): "))
     positioncat = st.selectbox("Which genre is it?", ["Comedy", "Drama", "Family", "Animation", "Entertainment", "Action & Adventure", "Documentary"])
     # transformo los datos

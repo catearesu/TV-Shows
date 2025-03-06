@@ -120,10 +120,10 @@ def search_by_filters(df_finder):
                             st.write(f"🎬 **Genre:** {row['Genero']}")
                             
                         st.write(f"📅 **Release date:** {row['First Air Date']}")
-                            
+                        st.write(f"**Status:** {row["Status"]}")   
                         if pd.notna(row['Rating']):
                             st.write(f"⭐ **Rating:** {round(row['Rating'], 1)}")
-                            
+                           
                         st.write(f"📆 **Number of Seasons:** {row['Number of Season']}")
                         st.write(f"🎥 **Number of Episodes:** {row['Number of Episodes']}")
                         st.write(f"⏱️ **Episode Duration:** {row['Episode Duration']} min")
@@ -147,6 +147,7 @@ def search_by_filters(df_finder):
                 st.write(f"**Synopsis:** {df_finder['Synopsis'].values[0]}")
             st.write(f"**Genre:** {df_finder['Genero'].values[0]}")
             st.write(f"**Release date:** {df_finder['First Air Date'].values[0]}")
+            st.write(f"**Status:** {df_finder["Status"].values[0]}")  
             if pd.notna(df_finder["Rating"].values[0]):
                 st.write(f"**Rating:** {round(df_finder['Rating'].values[0],1)}")
             st.write(f"**Number of Seasons:** {df_finder['Number of Season'].values[0]}")
@@ -179,6 +180,7 @@ def search_by_name(df_finder):
                 if pd.notna(df_finder["Genero"].iloc[0]):
                     st.write(f"🎬 **Genre:** {df_finder['Genero'].iloc[0]}")
                 st.write(f"📅 **Release date:** {df_finder['First Air Date'].iloc[0]}")
+                st.write(f"**Status:** {df_finder["Status"].iloc[0]}")  
                 if pd.notna(df_finder["Rating"].iloc[0]):
                     st.write(f"⭐ **Rating:** {round(df_finder['Rating'].iloc[0], 1)}")
                 st.write(f"📆 **Number of Seasons:** {df_finder['Number of Season'].iloc[0]}")
@@ -219,7 +221,7 @@ def search_by_name(df_finder):
                                 st.write(f"🎬 **Genre:** {row['Genero']}")
                             
                             st.write(f"📅 **Release date:** {row['First Air Date']}")
-                            
+                            st.write(f"**Status:** {row["Status"]}")  
                             if pd.notna(row['Rating']):
                                 st.write(f"⭐ **Rating:** {round(row['Rating'], 1)}")
                             
