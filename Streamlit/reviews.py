@@ -24,7 +24,7 @@ def user_reviews():
     # Seleccionamos la serie
     series_list = df_reviews["Title"].unique()
     sorted_list = sorted(series_list)
-    selected_series = st.selectbox(":tv: Please select a Tv-Show:", options= ["Select a TV-Show"]+ sorted_list.tolist())
+    selected_series = st.selectbox(":tv: Please select a Tv-Show:", options= ["Select a TV-Show"]+ sorted_list)
 
     if selected_series != "Select a TV-Show":
         # Filtramos las reseñas para la serie seleccionada
