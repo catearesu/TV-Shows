@@ -47,7 +47,7 @@ def search_by_filters(df_finder):
         main_idiomas = ["Spanish", "English"]
         all_idiomas = (main_idiomas + idiomas_sorted).unique()
         #
-        selected_idioma = st.sidebar.multiselect("Select languages:", options=["All"] + list(all_idiomas))
+        selected_idioma = st.sidebar.multiselect("Select languages:", options=["All"] + (all_idiomas))
         if selected_idioma and "All" not in selected_idioma:
             df_finder = df_finder[df_finder["Original Language"].apply(lambda x: any(idioma in x for idioma in selected_idioma))]
 
