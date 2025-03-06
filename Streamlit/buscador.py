@@ -104,7 +104,7 @@ def search_by_filters(df_finder):
             st.dataframe(df_finder_filtered[["Genero", "Rating", "Original Language"]])
             # mostrar los detalles de la serie al hacer click en la serie
             df_finder_title = df_finder["Title"].unique()
-            df_finder_sorted = sorted(df_finder_title)
+            df_finder_sorted = sorted(df_finder_title) # ordenar alfabeticamente
             selected_serie = st.selectbox("Select a TV-Show for more details: ", options= ["Select a TV-Show"]+ df_finder_sorted)
             if selected_serie != "Select a TV-Show":
                     serie_info = df_finder[df_finder["Title"] == selected_serie] 
@@ -147,23 +147,23 @@ def search_by_filters(df_finder):
             if poster_url:
                 st.image(poster_url, width=200) 
             if pd.notna(df_finder["Synopsis"].iloc[0]):
-                st.write(f"**Synopsis:** {df_finder['Synopsis'].iloc[0]}")
-            st.write(f"**Genre:** {df_finder['Genero'].iloc[0]}")
-            st.write(f"**Release date:** {df_finder['First Air Date'].iloc[0]}")
-            st.write(f"**Status:** {df_finder["Status"].iloc[0]}")  
+                st.write(f"📜 **Synopsis:** {df_finder['Synopsis'].iloc[0]}")
+            st.write(f"🎬 **Genre:** {df_finder['Genero'].iloc[0]}")
+            st.write(f"📅 **Release date:** {df_finder['First Air Date'].iloc[0]}")
+            st.write(f"🔲 **Status:** {df_finder["Status"].iloc[0]}")  
             if pd.notna(df_finder["Rating"].iloc[0]):
-                st.write(f"**Rating:** {round(df_finder['Rating'].iloc[0],1)}")
+                st.write(f"⭐ **Rating:** {round(df_finder['Rating'].iloc[0],1)}")
             if pd.notna(df_finder["Vote Count"].iloc[0]):
                 st.write(f"🔢 **Votes:** {df_finder['Vote Count'].iloc[0]}")
-            st.write(f"**Number of Seasons:** {df_finder['Number of Season'].iloc[0]}")
-            st.write(f"**Number of Episodes:** {df_finder['Number of Episodes'].iloc[0]}")
-            st.write(f"**Episode Duration:** {df_finder['Episode Duration'].iloc[0]} min")
-            st.write(f"**Original Language:** {df_finder['Original Language'].iloc[0]}")
-            st.write(f"**Origin Country:** {df_finder['Origin Country'].iloc[0]}")
+            st.write(f"📆 **Number of Seasons:** {df_finder['Number of Season'].iloc[0]}")
+            st.write(f"🎥 **Number of Episodes:** {df_finder['Number of Episodes'].iloc[0]}")
+            st.write(f"⏱️ **Episode Duration:** {df_finder['Episode Duration'].iloc[0]} min")
+            st.write(f"🗣️ **Original Language:** {df_finder['Original Language'].iloc[0]}")
+            st.write(f"🌐 **Origin Country:** {df_finder['Origin Country'].iloc[0]}")
             if df_finder["Where to Watch"].iloc[0]!= "No platforms available":
-                st.write(f"**Platforms:** {df_finder['Where to Watch'].iloc[0]}")
+                st.write(f"📱 **Platforms:** {df_finder['Where to Watch'].iloc[0]}")
             if pd.notna(df_finder["Cast"].iloc[0]):
-                st.write(f"**Cast:** {df_finder['Cast'].iloc[0]}")
+                st.write(f"🎭 **Cast:** {df_finder['Cast'].iloc[0]}")
             if df_finder["Trailer"].iloc[0] != "No trailer available":
                 st.video(df_finder["Trailer"].iloc[0])
                  
