@@ -152,4 +152,4 @@ def predict_emmy():
 
         else:
             st.error("**The show doesn't have a chance to win an Emmy**")
-            st.image("https://i.gifer.com/origin/2b/2bef5dcb100766198394e5bd1bcff395_w200.gif", width=400)
+            st.image("https://www.hallofseries.com/wp-content/uploads/2019/04/dawson-piange-640x360.gif", width=400)

@@ -22468,7 +22468,7 @@
             <target field='[federated.0pixzw91m2gnvj1coav2o03f078o].[none:Genero:nk]' />
           </filter>
           <shelf-sorts>
-            <shelf-sort-v2 dimension-to-sort='[federated.0pixzw91m2gnvj1coav2o03f078o].[none:Cast:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0pixzw91m2gnvj1coav2o03f078o].[ctd:F1:qk]' shelf='rows' />
+            <shelf-sort-v2 dimension-to-sort='[federated.0pixzw91m2gnvj1coav2o03f078o].[none:Cast:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0pixzw91m2gnvj1coav2o03f078o].[avg:Vote Count:qk]' shelf='rows' />
           </shelf-sorts>
           <slices>
             <column>[federated.0pixzw91m2gnvj1coav2o03f078o].[none:Genero:nk]</column>
@@ -22574,7 +22574,7 @@
             </dictionary>
           </manual-sort>
           <filter class='categorical' column='[federated.0c71dv50tw7tzs1fu9s4i1d5txsw].[Action (TV-Show)]'>
-            <groupfilter function='member' level='[Calculation_179581089263910914]' member='&quot;The Sopranos&quot;' user:ui-action-filter='[Action5_DF305C06A9AE4485A2D08B3677D8A08A]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='level-members' level='[Calculation_179581089263910914]' user:ui-action-filter='[Action5_DF305C06A9AE4485A2D08B3677D8A08A]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.0c71dv50tw7tzs1fu9s4i1d5txsw].[none:Genero:nk]' filter-group='9'>
             <groupfilter function='level-members' level='[none:Genero:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
@@ -24376,7 +24376,7 @@
             </groupfilter>
           </filter>
           <shelf-sorts>
-            <shelf-sort-v2 dimension-to-sort='[federated.0c71dv50tw7tzs1fu9s4i1d5txsw].[none:Cast:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0c71dv50tw7tzs1fu9s4i1d5txsw].[min:num_emmys:qk]' shelf='rows' />
+            <shelf-sort-v2 dimension-to-sort='[federated.0c71dv50tw7tzs1fu9s4i1d5txsw].[none:Cast:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0c71dv50tw7tzs1fu9s4i1d5txsw].[min:num_nominaciones:qk]' shelf='rows' />
           </shelf-sorts>
           <slices>
             <column>[federated.0c71dv50tw7tzs1fu9s4i1d5txsw].[none:Title:nk]</column>
@@ -25033,6 +25033,7 @@
             </column>
             <column datatype='string' name='[Genero]' role='dimension' type='nominal' />
             <column datatype='string' name='[Title]' role='dimension' type='nominal' />
+            <column-instance column='[Genero]' derivation='Attribute' name='[attr:Genero:nk]' pivot='key' type='nominal' />
             <column-instance column='[num_emmys]' derivation='Min' name='[min:num_emmys:qk]' pivot='key' type='quantitative' />
             <column-instance column='[num_nominaciones]' derivation='Min' name='[min:num_nominaciones:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_179581089263910914]' derivation='None' name='[none:Calculation_179581089263910914:nk]' pivot='key' type='nominal' />
@@ -26840,12 +26841,16 @@
           <filter class='categorical' column='[federated.0c71dv50tw7tzs1fu9s4i1d5txsw].[none:Genero:nk]' filter-group='9'>
             <groupfilter function='level-members' level='[none:Genero:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
+          <filter class='categorical' column='[federated.0c71dv50tw7tzs1fu9s4i1d5txsw].[none:Title:nk]'>
+            <groupfilter function='level-members' level='[none:Title:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+          </filter>
           <shelf-sorts>
             <shelf-sort-v2 dimension-to-sort='[federated.0c71dv50tw7tzs1fu9s4i1d5txsw].[none:Calculation_179581089263910914:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0c71dv50tw7tzs1fu9s4i1d5txsw].[min:num_nominaciones:qk]' shelf='rows' />
           </shelf-sorts>
           <slices>
             <column>[federated.0c71dv50tw7tzs1fu9s4i1d5txsw].[none:Genero:nk]</column>
             <column>[federated.0c71dv50tw7tzs1fu9s4i1d5txsw].[none:Calculation_179581089263910914:nk]</column>
+            <column>[federated.0c71dv50tw7tzs1fu9s4i1d5txsw].[none:Title:nk]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -26888,6 +26893,9 @@
               <breakdown value='auto' />
             </view>
             <mark class='Automatic' />
+            <encodings>
+              <tooltip column='[federated.0c71dv50tw7tzs1fu9s4i1d5txsw].[attr:Genero:nk]' />
+            </encodings>
             <style>
               <style-rule element='mark'>
                 <format attr='mark-labels-cull' value='false' />
@@ -26902,6 +26910,7 @@
             <mark class='Automatic' />
             <encodings>
               <color column='[federated.0c71dv50tw7tzs1fu9s4i1d5txsw].[min:num_emmys:qk]' />
+              <tooltip column='[federated.0c71dv50tw7tzs1fu9s4i1d5txsw].[attr:Genero:nk]' />
               <text column='[federated.0c71dv50tw7tzs1fu9s4i1d5txsw].[min:num_emmys:qk]' />
             </encodings>
             <customized-tooltip>
@@ -26927,6 +26936,7 @@
             <mark class='Automatic' />
             <encodings>
               <color column='[federated.0c71dv50tw7tzs1fu9s4i1d5txsw].[min:num_nominaciones:qk]' />
+              <tooltip column='[federated.0c71dv50tw7tzs1fu9s4i1d5txsw].[attr:Genero:nk]' />
               <text column='[federated.0c71dv50tw7tzs1fu9s4i1d5txsw].[min:num_nominaciones:qk]' />
             </encodings>
             <customized-tooltip>
@@ -27299,13 +27309,9 @@
             <column-instance column='[release_year (copia)_179581089261424640]' derivation='Year' name='[yr:release_year (copia)_179581089261424640:ok]' pivot='key' type='ordinal' />
           </datasource-dependencies>
           <filter class='categorical' column='[federated.1l08a3l00a1fc413kspf212u1ew7].[Action (Genero,Status)]'>
-            <groupfilter function='crossjoin' user:ui-action-filter='[Action2_CD1B927C6ABA4229A06D057CAFC894A1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
-              <groupfilter function='member' level='[Genero]' member='&quot;Drama&quot;' />
-              <groupfilter function='union'>
-                <groupfilter function='member' level='[Status]' member='&quot;Canceled&quot;' />
-                <groupfilter function='member' level='[Status]' member='&quot;Ended&quot;' />
-                <groupfilter function='member' level='[Status]' member='&quot;Returning Series&quot;' />
-              </groupfilter>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2_CD1B927C6ABA4229A06D057CAFC894A1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Genero]' />
+              <groupfilter function='level-members' level='[Status]' />
             </groupfilter>
           </filter>
           <filter class='categorical' column='[federated.1l08a3l00a1fc413kspf212u1ew7].[none:Origin Country:nk]' filter-group='6'>
@@ -27467,7 +27473,7 @@
           <filter class='quantitative' column='[federated.1l08a3l00a1fc413kspf212u1ew7].[usr:Calculation_363736090723864588:qk]' included-values='non-null' />
           <filter class='quantitative' column='[federated.1l08a3l00a1fc413kspf212u1ew7].[usr:Calculation_363736090726572045:qk]' included-values='in-range'>
             <min>1</min>
-            <max>28</max>
+            <max>26</max>
           </filter>
           <shelf-sorts>
             <shelf-sort-v2 dimension-to-sort='[federated.1l08a3l00a1fc413kspf212u1ew7].[none:Origin Country:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1l08a3l00a1fc413kspf212u1ew7].[usr:Calculation_363736090723864588:qk]' shelf='rows' />
@@ -27597,13 +27603,9 @@
             <target field='[federated.1p3nhpg1kgvebk14zp0l00pk68mv].[none:Origin Country:nk]' />
           </filter>
           <filter class='categorical' column='[federated.1p3nhpg1kgvebk14zp0l00pk68mv].[Action (Genero,Status)]'>
-            <groupfilter function='crossjoin' user:ui-action-filter='[Action2_3118909C02694D08B3DBCEF14B4EFA7D]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
-              <groupfilter function='member' level='[Genero]' member='&quot;Drama&quot;' />
-              <groupfilter function='union'>
-                <groupfilter function='member' level='[Status]' member='&quot;Canceled&quot;' />
-                <groupfilter function='member' level='[Status]' member='&quot;Ended&quot;' />
-                <groupfilter function='member' level='[Status]' member='&quot;Returning Series&quot;' />
-              </groupfilter>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2_3118909C02694D08B3DBCEF14B4EFA7D]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Genero]' />
+              <groupfilter function='level-members' level='[Status]' />
             </groupfilter>
           </filter>
           <filter class='categorical' column='[federated.1p3nhpg1kgvebk14zp0l00pk68mv].[none:Where to Watch:nk]'>
@@ -28123,7 +28125,7 @@
           <zone h='88190' id='28' param='horz' type-v2='layout-flow' w='50298' x='48954' y='10784'>
             <zone h='88190' id='31' param='vert' type-v2='layout-flow' w='50298' x='48954' y='10784'>
               <zone h='88190' id='37' name='actores' w='50298' x='48954' y='10784'>
-                <layout-cache fixed-size-h='373917' type-h='fixed' type-w='cell' />
+                <layout-cache fixed-size-h='115737' type-h='fixed' type-w='cell' />
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -28139,9 +28141,9 @@
               <format attr='background-color' value='#ffffff' />
             </zone-style>
           </zone>
-          <zone h='74027' id='30' param='vert' type-v2='layout-flow' w='48206' x='748' y='24947'>
-            <zone h='74027' id='33' name='metricas pais' w='48206' x='748' y='24947'>
-              <layout-cache fixed-size-h='603' type-h='fixed' type-w='fixed' />
+          <zone h='75512' id='30' param='vert' type-v2='layout-flow' w='48206' x='748' y='23462'>
+            <zone h='72949' id='33' name='metricas pais' w='48206' x='748' y='23462'>
+              <layout-cache fixed-size-h='561' type-h='fixed' type-w='fixed' />
               <zone-style>
                 <format attr='border-color' value='#000000' />
                 <format attr='border-style' value='none' />
@@ -28150,7 +28152,7 @@
               </zone-style>
             </zone>
           </zone>
-          <zone h='14163' id='32' param='horz' type-v2='layout-flow' w='48206' x='748' y='10784' />
+          <zone h='12678' id='32' param='horz' type-v2='layout-flow' w='48206' x='748' y='10784' />
           <zone h='9758' id='36' param='horz' type-v2='layout-flow' w='98504' x='748' y='1026' />
           <zone-style>
             <format attr='border-color' value='#000000' />
@@ -28352,7 +28354,7 @@
           </formatted-text>
         </zone>
         <zone h='4872' id='83' mode='typeinlist' name='emmy por serie' param='[federated.0c71dv50tw7tzs1fu9s4i1d5txsw].[none:Title:nk]' type-v2='filter' values='database' w='13658' x='85594' y='36667' />
-        <zone h='18077' id='133' name='actors' show-title='false' w='37138' x='32834' y='10385'>
+        <zone h='18077' id='133' name='actors' show-title='false' w='37138' x='33302' y='11538'>
           <layout-cache fixed-size-h='119001' fixed-size-w='298' type-h='fixed' type-w='fixed' />
         </zone>
       </zones>
@@ -28994,7 +28996,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='78' />
+      <active id='82' />
       <simple-id uuid='{CE0B2906-E1D6-4E17-915F-A4F095F98008}' />
     </window>
     <window class='dashboard' name='GENRES &amp; PLATFORMS'>
@@ -29012,10 +29014,10 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='52' />
+      <active id='131' />
       <simple-id uuid='{F5E51B91-B87A-49DA-8559-CDAC91E5437A}' />
     </window>
-    <window class='dashboard' name='COUNTRIES &amp; ACTORS'>
+    <window class='dashboard' maximized='true' name='COUNTRIES &amp; ACTORS'>
       <viewpoints>
         <viewpoint name='actores'>
           <zoom type='fit-width' />
@@ -29024,10 +29026,10 @@
           <zoom type='fit-width' />
         </viewpoint>
       </viewpoints>
-      <active id='37' />
+      <active id='33' />
       <simple-id uuid='{FCAEDD13-B146-4778-A245-AECA862F224A}' />
     </window>
-    <window class='dashboard' maximized='true' name='EMMYS'>
+    <window class='dashboard' name='EMMYS'>
       <viewpoints>
         <viewpoint name='actors'>
           <zoom type='fit-width' />
@@ -29039,32 +29041,8 @@
           <zoom type='fit-width' />
         </viewpoint>
       </viewpoints>
-      <active id='75' />
+      <active id='132' />
       <simple-id uuid='{77856BC0-A382-4AEA-A158-A429020B8774}' />
-    </window>
-    <window class='worksheet' name='actors'>
-      <cards>
-        <edge name='left'>
-          <strip size='160'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-            <card type='measures' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='31'>
-            <card type='title' />
-          </strip>
-        </edge>
-      </cards>
-      <simple-id uuid='{F6076A40-A052-4A95-A3CF-1EC8BE479DBE}' />
     </window>
     <window class='worksheet' hidden='true' name='actores' tab-color='#f66273'>
       <cards>
@@ -29098,6 +29076,30 @@
         <zoom type='fit-width' />
       </viewpoint>
       <simple-id uuid='{83F8CB3F-A38E-47E9-A449-9053D52BB956}' />
+    </window>
+    <window class='worksheet' hidden='true' name='actors'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F6076A40-A052-4A95-A3CF-1EC8BE479DBE}' />
     </window>
     <window class='worksheet' hidden='true' name='avg counts' tab-color='#4f779a'>
       <cards>
