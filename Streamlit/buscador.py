@@ -10,7 +10,7 @@ def tv_shows_finder():
     st.header("TV-Shows Searcher")
     st.write("Here you can explore content of more than 9000 TV-Shows from all over the world!!!")
     st.image("https://acf.geeknetic.es/imagenes/auto/2023/5/2/h3o-ahorra-dinero-planificando-ver-tus-series-favoritas.jpg", width=550)
-    df_finder= pd.read_csv("Dataset/df_buscador_streamlit2.csv")
+    df_finder= pd.read_csv("/Users/caterina/IronHack/Projects/TV-Shows/Dataset/df_buscador_streamlit2.csv")
     st.write ("#### How would you like to search?")
     search_type = st.radio("Select an option",
                                 options= ["Search by Name", "Search by Filters"])

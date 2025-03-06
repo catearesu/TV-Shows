@@ -44,7 +44,7 @@ def show_overview():
     st.markdown("---") # para que slga una linea que separe
 
     st.subheader("3. Machine Learning Models")
-    st.image("images/Captura de pantalla 2025-03-03 a las 16.30.30.png", width=800)
+    st.image("/Users/caterina/IronHack/Projects/TV-Shows/images/Captura de pantalla 2025-03-03 a las 16.30.30.png", width=800)
     st.write("""
     After preparing the data, I applied several **Machine Learning models** to predict whether a serie is likely to win the **Emmy Awards**. The models used were:
     - **Logistic Regression**
