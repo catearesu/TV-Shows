@@ -120,7 +120,7 @@ def search_by_filters(df_finder):
                             st.write(f"🎬 **Genre:** {row['Genero']}")
                             
                         st.write(f"📅 **Release date:** {row['First Air Date']}")
-                        st.write(f"**Status:** {row["Status"]}")   
+                        st.write(f"🔲 **Status:** {row["Status"]}")   
                         if pd.notna(row['Rating']):
                             st.write(f"⭐ **Rating:** {round(row['Rating'], 1)}")
                         if pd.notna(row["Vote Count"]):
@@ -183,7 +183,7 @@ def search_by_name(df_finder):
                 if pd.notna(df_finder["Genero"].iloc[0]):
                     st.write(f"🎬 **Genre:** {df_finder['Genero'].iloc[0]}")
                 st.write(f"📅 **Release date:** {df_finder['First Air Date'].iloc[0]}")
-                st.write(f"**Status:** {df_finder["Status"].iloc[0]}")  
+                st.write(f"🔲 **Status:** {df_finder["Status"].iloc[0]}")  
                 if pd.notna(df_finder["Rating"].iloc[0]):
                     st.write(f"⭐ **Rating:** {round(df_finder['Rating'].iloc[0], 1)}")
                 if pd.notna(df_finder["Vote Count"].iloc[0]):
@@ -226,7 +226,7 @@ def search_by_name(df_finder):
                                 st.write(f"🎬 **Genre:** {row['Genero']}")
                             
                             st.write(f"📅 **Release date:** {row['First Air Date']}")
-                            st.write(f"**Status:** {row["Status"]}")  
+                            st.write(f"🔲 **Status:** {row["Status"]}")  
                             if pd.notna(row['Rating']):
                                 st.write(f"⭐ **Rating:** {round(row['Rating'], 1)}")
                             if pd.notna(row["Vote Count"]):
