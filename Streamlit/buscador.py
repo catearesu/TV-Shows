@@ -88,7 +88,8 @@ def search_by_filters(df_finder):
         df_actores = df_finder.dropna(subset=["Cast"])
         # Extraemos los actores únicos
         actor_opciones = df_actores["Cast"].str.split(', ').explode().dropna().unique()
-        selected_actors = st.sidebar.multiselect("Select actors:", options=["All"] + list(actor_opciones))
+        actor_sorted = sorted(actor_opciones)
+        selected_actors = st.sidebar.multiselect("Select actors:", options=["All"] + list(actor_sorted))
         if selected_actors and "All" not in selected_actors:
             df_finder = df_finder[df_finder["Cast"].apply(lambda x: isinstance(x, str) and any(actor in x for actor in selected_actors))]
     
