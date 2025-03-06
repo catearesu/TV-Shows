@@ -114,14 +114,14 @@ def predict_emmy():
     """)
     # Pedimos los inputs al usuario
     rating = int(st.number_input("What rating does the show have? (1 to 10): ", min_value=1.00))
-    if rating < 1 or rating > 10:
+    if rating > 10:
         st.error("Please insert a rating between 1 and 10.")
         st.stop()  # deja de ejectuar el codigo si el rating es menor que 1 o mayor que 10
-    popularity = int(st.number_input("How popular is it?: ", min_value=0))
-    vote_count = int(st.number_input("How many votes does it have?: ", min_value=0))
-    seasons = int(st.number_input("How many seasons?: ", min_value=0))
-    episodes = int(st.number_input("How many episodes?: ", min_value=0))
-    duration = int(st.number_input("What's the average duration? (in minutes): ", min_value=0))
+    popularity = int(st.number_input("How popular is it? (44-2742): ", min_value=1))
+    vote_count = int(st.number_input("How many votes does it have? (1-24560): ", min_value=1))
+    seasons = int(st.number_input("How many seasons?: ", min_value=1))
+    episodes = int(st.number_input("How many episodes?: ", min_value=1))
+    duration = int(st.number_input("What's the average duration? (in minutes): ", min_value=1))
     positioncat = st.selectbox("Which genre is it?", ["Comedy", "Drama", "Family", "Animation", "Entertainment", "Action & Adventure", "Documentary"])
     # transformo los datos
     popularity_log = math.log(popularity) if popularity > 0 else float("nan")
