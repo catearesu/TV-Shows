@@ -117,7 +117,7 @@ def predict_emmy():
     if rating < 1 or rating > 10:
         st.error("Please insert a rating between 1 and 10.")
         st.stop()  # deja de ejectuar el codigo si el rating es menor que 1 o mayor que 10
-    popularity = int(st.number_input("How popular is it?: "))
+    popularity = int(st.number_input("How popular is it?: ", min_value=1))
     vote_count = int(st.number_input("How many votes does it have?: "))
     seasons = int(st.number_input("How many seasons?: "))
     episodes = int(st.number_input("How many episodes?: "))
