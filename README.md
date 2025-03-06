@@ -41,7 +41,7 @@ Once the data was collected, I performed **Exploratory Data Analysis (EDA)** to 
   <img src="images/Captura de pantalla 2025-03-03 a las 16.30.30.png" width="70%" style="display: inline-block; margin-right: 10px;"/>
 </p>
 
-After preparing the data, I applied several **Machine Learning Models** to predict the winners of the **Emmy Awards**. 
+After preparing the data, I applied several **Machine Learning Models** to predict whether a show has a chance to win the **Emmy Award**. 
 The models used were:
 
 - **Logistic Regression**
@@ -55,7 +55,7 @@ The models used were:
   <img src="images/sentiment_analysis.png" width="70%" style="display: inline-block; margin-right: 10px;"/>
 </p>
 
-Another part of this analysis involved diving into **public opinion** through **sentiment analysis**. I conducted sentiment analysis on reviews to evaluate how each TV show was perceived by its audience. The goal was to assess the overall sentiment—whether it was **positive**, **negative**, or **neutral**—and understand how viewers rated each show.
+Another part of this analysis involved diving into **public opinion** through **sentiment analysis**. I conducted sentiment analysis on reviews to evaluate how each TV show was perceived by its audience. The goal was to assess the overall sentiment—whether it was **positive**, **negative**, or **neutral**.
 
 To achieve this, I used **tokenization** and **lemmatization** techniques to process the reviews and extract meaningful insights from the text. Additionally, I employed the **compound score** from the VADER sentiment analysis tool, which helped quantify the overall sentiment in a more comprehensive way. 
 
