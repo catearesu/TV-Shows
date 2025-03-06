@@ -46,7 +46,7 @@ def show_overview():
     st.subheader("3. Machine Learning Models")
     st.image("/Users/caterina/IronHack/Project IV Tv Series/images/Captura de pantalla 2025-03-03 a las 16.30.30.png", width=800)
     st.write("""
-    After preparing the data, I applied several **Machine Learning models** to predict the winners of the **Emmy Awards**. The models used were:
+    After preparing the data, I applied several **Machine Learning models** to predict whether a serie is likely to win the **Emmy Awards**. The models used were:
     - **Logistic Regression**
     - **K-Nearest Neighbors (KNN)**
     - **Decision Trees**
