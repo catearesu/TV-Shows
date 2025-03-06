@@ -224,3 +224,5 @@ wrapt==1.17.2
 xarray==2025.1.1
 xyzservices @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/xyzservices_1699251070342/work
 zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1726248574750/work
+streamlit==1.43.0
+streamlit-option-menu
