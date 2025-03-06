@@ -13,7 +13,7 @@ def show_overview():
 
     
     st.subheader("1. Data Collection via API")
-    st.image("/Users/caterina/IronHack/Projects/TV-Shows/images/tmdb.jpg", width=100)  
+    st.image("Streamlit/images/tmdb.jpg", width=100)  
 
     st.write("""
     The first step was **collecting data** using **APIs**. I gathered information about TV shows from all over the world, including:
@@ -44,7 +44,7 @@ def show_overview():
     st.markdown("---") # para que slga una linea que separe
 
     st.subheader("3. Machine Learning Models")
-    st.image("/Users/caterina/IronHack/Projects/TV-Shows/images/Captura de pantalla 2025-03-03 a las 16.30.30.png", width=800)
+    st.image("/Streamlit/images/Captura de pantalla 2025-03-03 a las 16.30.30.png", width=800)
     st.write("""
     After preparing the data, I applied several **Machine Learning models** to predict whether a serie is likely to win the **Emmy Awards**. The models used were:
     - **Logistic Regression**
