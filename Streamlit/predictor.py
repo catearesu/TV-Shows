@@ -70,7 +70,7 @@ def predict_emmy():
 - *Curse of Dimensionality*: Degrade significantly as the number of dimensions increases''')
     st.markdown("*Hyperparameter Tuning*")
     # accuracy score y best parameters
-    st.image("Streamlit/images/Captura de pantalla 2025-03-03 a las 20.46.26.png")
+    st.image("Streamlit/images/Captura de pantalla 2025-03-04 a las 19.34.43.png")
     col1, col2 = st.columns(2)
     with col1:
         st.image("Streamlit/images/knnconfmatrix.png", caption="Confusion Matrix", width=300)
@@ -82,7 +82,7 @@ def predict_emmy():
     st.markdown("- **<span style='font-size: 20px;'><b>Decision Tree</b></span>**: A model that works with stratifying or segmenting the predictor space into a number of binary decisions to make the prediction. Each binary split consists of a decision rule which either sends us left or sends us right.", unsafe_allow_html=True)
     st.markdown("*Hyperparameter Tuning*")
     # best parameters
-    st.image("Streamlit/images/Captura de pantalla 2025-03-03 a las 20.24.25.png")
+    st.image("Streamlit/images/Captura de pantalla 2025-03-04 a las 19.51.21.png")
     # accuracy score
     st.image("Streamlit/images/Captura de pantalla 2025-03-03 a las 20.23.55.png")
     col1, col2 = st.columns(2)
