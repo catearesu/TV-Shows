@@ -151,7 +151,7 @@ def search_by_filters(df_finder):
             st.write(f"**Status:** {df_finder["Status"].values[0]}")  
             if pd.notna(df_finder["Rating"].values[0]):
                 st.write(f"**Rating:** {round(df_finder['Rating'].values[0],1)}")
-            if pd.notna(row["Vote Count"]):
+            if pd.notna(df_finder["Vote Count"].values[0]):
                 st.write(f"🔢 **Votes:** {df_finder['Vote Count'].values[0]}")
             st.write(f"**Number of Seasons:** {df_finder['Number of Season'].values[0]}")
             st.write(f"**Number of Episodes:** {df_finder['Number of Episodes'].values[0]}")
@@ -186,7 +186,7 @@ def search_by_name(df_finder):
                 st.write(f"**Status:** {df_finder["Status"].iloc[0]}")  
                 if pd.notna(df_finder["Rating"].iloc[0]):
                     st.write(f"⭐ **Rating:** {round(df_finder['Rating'].iloc[0], 1)}")
-                if pd.notna(row["Vote Count"]):
+                if pd.notna(df_finder["Vote Count"].iloc[0]):
                     st.write(f"🔢 **Votes:** {df_finder['Vote Count'].iloc[0]}")
                 st.write(f"📆 **Number of Seasons:** {df_finder['Number of Season'].iloc[0]}")
                 st.write(f"🎥 **Number of Episodes:** {df_finder['Number of Episodes'].iloc[0]}")
