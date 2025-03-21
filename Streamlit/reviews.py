@@ -39,7 +39,7 @@ def user_reviews():
         neutral_reviews = filtered_df[filtered_df["Sentiment_Lemmatized"]== 0]
 
         # Mostramos el WordCloud de la serie seleccionada
-        st.subheader(f"{filtered_df["Title"]} WordCloud")
+        st.subheader(f"{filtered_df["Title"].iloc[0]} WordCloud")
         generate_wordcloud(filtered_df["Lemmatized_reviews"])
 
         # RESEÑAS POSITIVAS
