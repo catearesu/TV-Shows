@@ -29,7 +29,6 @@ def user_reviews():
     if selected_series != "Select a TV-Show":
         # Filtramos las reseñas para la serie seleccionada
         filtered_df = df_reviews[df_reviews["Title"] == selected_series]
-        st.subheader(filtered_df["Title"].iloc[0])
         poster_url = filtered_df["Poster"].iloc[0]
         if poster_url:
             st.image(poster_url, width=200) 
