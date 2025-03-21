@@ -29,10 +29,7 @@ def user_reviews():
     if selected_series != "Select a TV-Show":
         # Filtramos las reseñas para la serie seleccionada
         filtered_df = df_reviews[df_reviews["Title"] == selected_series]
-        poster_url = filtered_df["Poster"].iloc[0]
-        if poster_url:
-            st.image(poster_url, width=200) 
-
+          
         # Filtramos reseñas positivas y negativas
         positive_reviews = filtered_df[filtered_df["Sentiment_Lemmatized"] == 1]
         negative_reviews = filtered_df[filtered_df["Sentiment_Lemmatized"] == -1]
